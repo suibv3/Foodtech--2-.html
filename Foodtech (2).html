@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hábitos Saludables para Adolescentes</title>
+    <style>
+        /* Colores en tonos verdes suaves */
+        :root {
+            --verde-suave-1: #e0f2f1; /* Verde menta muy pálido */
+            --verde-suave-2: #b2dfdb; /* Verde menta */
+            --verde-suave-3: #80cbc4; /* Verde menta más oscuro */
+            --verde-suave-4: #4db6ac; /* Verde azulado suave */
+            --texto-oscuro: #333;
+            --texto-claro: #fff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--verde-suave-1);
+            color: var(--texto-oscuro);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--verde-suave-2);
+            color: var(--texto-claro);
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            background-color: var(--verde-suave-3);
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: var(--texto-claro);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--verde-suave-1);
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            overflow: hidden;
+            background-color: var(--texto-claro);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--verde-suave-4);
+            border-bottom: 2px solid var(--verde-suave-3);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        /* Estilos para Rutinas */
+        .rutinas-lista {
+            list-style: none;
+            padding: 0;
+        }
+
+        .rutinas-lista li {
+            background-color: var(--verde-suave-1);
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 5px solid var(--verde-suave-4);
+        }
+
+        .rutinas-lista li strong {
+            color: var(--verde-suave-4);
+        }
+
+        /* Estilos para Recetas */
+        .recetas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .receta-item {
+            background-color: var(--verde-suave-1);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .receta-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .receta-item img {
+            max-width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .receta-item h3 {
+            color: var(--verde-suave-4);
+            margin-top: 0;
+        }
+
+        /* Estilos para Contacto */
+        .contacto-info p {
+            margin-bottom: 15px;
+        }
+
+        .contacto-form input[type="text"],
+        .contacto-form input[type="email"],
+        .contacto-form textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid var(--verde-suave-3);
+            border-radius: 5px;
+        }
+
+        .contacto-form button {
+            background-color: var(--verde-suave-4);
+            color: var(--texto-claro);
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .contacto-form button:hover {
+            background-color: var(--verde-suave-3);
+        }
+
+        footer {
+            background-color: var(--verde-suave-3);
+            color: var(--texto-claro);
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+
+        /* Sección Premium - Placeholder */
+        .premium-section {
+            background-color: var(--verde-suave-2);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .premium-section h2 {
+            color: var(--texto-claro);
+            border-bottom: none;
+        }
+
+        .premium-section p {
+            color: var(--texto-claro);
+            font-size: 1.1em;
+        }
+
+        .premium-section button {
+            background-color: var(--verde-suave-1);
+            color: var(--verde-suave-4);
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .premium-section button:hover {
+            background-color: var(--verde-suave-3);
+            color: var(--texto-claro);
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>¡FOOD-TECH!</h1>
+        <p>Descubre cómo llevar una vida más saludable y activa.</p>
+    </header>
+
+    <nav>
+        <a href="#rutinas">Rutinas</a>
+        <a href="#recetas">Recetas</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#premium">Acceso Premium</a>
+    </nav>
+
+    <div class="container">
+        <section id="inicio" class="section">
+            <h2>Bienvenido a tu Espacio Saludable</h2>
+            <p>Aquí encontrarás todo lo que necesitas para empezar tu camino hacia hábitos más saludables. Desde rutinas de ejercicio adaptadas a ti hasta deliciosas y nutritivas recetas, todo pensado para que te sientas genial.</p>
+            <p>¡Explora nuestras secciones y descubre tu potencial!</p>
+        </section>
+
+        <section id="rutinas" class="section">
+            <h2>Rutinas de Ejercicio para Ti</h2>
+            <p>¡Muévete y siéntete con energía! Aquí te dejamos algunas ideas para que incorpores la actividad física en tu día a día:</p>
+            <ul class="rutinas-lista">
+                <li><strong>Rutina de Mañana (15 min):</strong> Estiramientos suaves, yoga básico y respiración profunda para empezar el día con calma.</li>
+                <li><strong>Cardio Divertido (30 min):</strong> Baila tu música favorita, haz saltos o corre en el sitio. ¡La idea es que disfrutes!</li>
+                <li><strong>Fortalecimiento Muscular (20 min):</strong> Sentadillas, flexiones (puedes apoyarte en las rodillas si es necesario) y planchas para tonificar tu cuerpo.</li>
+                <li><strong>Relajación y Flexibilidad (10 min):</strong> Estiramientos profundos para mejorar tu movilidad y reducir el estrés.</li>
+            </ul>
+            <p><em>Recuerda siempre calentar antes y enfriar después. ¡Escucha a tu cuerpo!</em></p>
+        </section>
+
+        <section id="recetas" class="section">
+            <h2>Recetas Saludables y Deliciosas</h2>
+            <p>¡Comer sano nunca fue tan fácil y rico! Prueba estas ideas:</p>
+            <div class="recetas-grid">
+                <div class="receta-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5Zb18jTxW6m1RmHmEE2pIwKSfEzirfj3e-g&s" alt="Batido Energético">
+                    <h3>Batido Energético de Frutas</h3>
+                    <p>Una mezcla perfecta de frutas, yogur y un toque de miel para recargar energías.</p>
+                </div>
+                <div class="receta-item">
+                    <img src="https://i.ytimg.com/vi/VN2HVyh8UPs/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD2_erNw9etNQkn1UQjNWHlx4pK2g" alt="Ensalada Completa">
+                    <h3>Ensalada Completa de Pollo/Vegetariana</h3>
+                    <p>Proteína, vegetales frescos y un aderezo ligero para una comida balanceada.</p>
+                </div>
+                <div class="receta-item">
+                    <img src="https://meditts.com/wp-content/uploads/2023/11/cuenco-de-frutos-secos.jpg" alt="Snack Saludable">
+                    <h3>Snack de Frutos Secos y Fruta</h3>
+                    <p>La combinación ideal para esos momentos entre comidas.</p>
+                </div>
+                <div class="receta-item">
+                    <img src="https://i.ytimg.com/vi/1H1p2vkp388/maxresdefault.jpg" alt="Wrap Integral">
+                    <h3>Wrap Integral con Verduras</h3>
+                    <p>Una opción rápida y nutritiva para llevar o disfrutar en casa.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="section">
+            <h2>Contáctanos</h2>
+            <p>¿Tienes preguntas, sugerencias o quieres compartir tu experiencia? ¡Nos encantaría saber de ti!</p>
+            <div class="contacto-info">
+                <p><strong>Email:</strong> <a href="xthianzapata@gmail.com">xthianzapata@gmail.com</a></p>
+                <p><strong>Redes Sociales:</strong> WhatsApp: 942775491   Instagram: @Foodtech_2025</p>
+            </div>
+            <div class="contacto-form">
+                <h3>Envíanos un Mensaje</h3>
+                <form action="#" method="post">
+                    <input type="text" name="nombre" placeholder="Tu Nombre" required>
+                    <input type="email" name="email" placeholder="Tu Email" required>
+                    <textarea name="mensaje" rows="5" placeholder="Tu Mensaje" required></textarea>
+                    <button type="submit">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="premium" class="premium-section">
+            <h2>¡Desbloquea Contenido Exclusivo!</h2>
+            <p>Accede a planes de entrenamiento personalizados, recetas gourmet y seguimiento de progreso avanzado además de un asistente personal.</p>
+            <button onclick="alert('¡Próximamente podrás suscribirte aquí!')">Suscríbete Ahora</button>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Food-Tech. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
